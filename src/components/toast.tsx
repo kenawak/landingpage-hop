@@ -44,7 +44,7 @@ export function ContributionToast() {
         Contribute to our open-source project on GitHub and make a difference! 💻
       </p>
       <a
-        href="https://github.com/your-repo"
+        href="https://github.com/kenawak/homeofproject"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition-colors"

@@ -6,10 +6,12 @@ import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ParticleButton } from "@/components/ui/particle-button";
 
+interface HeaderProps {
+  onSubmitClick: () => void;
+}
 
-function Header() {
+function Header({ onSubmitClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,6 +26,9 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
+          <Button onClick={onSubmitClick} className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+            Submit Project
+          </Button>
           <Link to="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
             <ParticleButton
               variant="outline"
@@ -72,6 +77,9 @@ function Header() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="absolute top-16 left-0 right-0 bg-gray-900 border-b border-gray-800 p-4">
+              <Button onClick={onSubmitClick} className="block py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+                Submit Project
+              </Button>
               <Link
                 to="https://github.com/your-repo"
                 target="_blank"

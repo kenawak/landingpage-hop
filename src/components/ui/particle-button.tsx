@@ -8,12 +8,13 @@ import { Star } from "lucide-react"
 interface ParticleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     successDuration?: number
     variant?: string
+    onSuccess?: () => void
 }
 
 function SuccessParticles({
     buttonRef,
 }: {
-    buttonRef: React.RefObject<HTMLButtonElement>;
+    buttonRef: React.RefObject<HTMLButtonElement | null>;
 }) {
     const rect = buttonRef.current?.getBoundingClientRect();
     if (!rect) return null;
@@ -76,10 +77,10 @@ export function ParticleButton({
 
     return (
         <>
-            {success && <SuccessParticles buttonRef={buttonRef} />}
+            {success && buttonRef.current && <SuccessParticles buttonRef={buttonRef} />}
             <Button
                 ref={buttonRef}
-                variant={variant}
+                variant={variant as any}
                 className={cn(
                     "relative",
                     success && "scale-95",

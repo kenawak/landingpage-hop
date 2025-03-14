@@ -40,7 +40,7 @@ export function Footer() {
             <p className="text-gray-400 mb-4">
               Join our Telegram community to connect with other developers and stay updated.
             </p>
-            <Link to="https://t.me/your_telegram_channel" className="text-cyan-400 hover:underline">
+            <Link to="https://t.me/homeofprojects" className="text-cyan-400 hover:underline">
               Join on Telegram
             </Link>
           </div>

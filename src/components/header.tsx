@@ -29,7 +29,7 @@ function Header({ onSubmitClick }: HeaderProps) {
           <Button onClick={onSubmitClick} className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
             Submit Project
           </Button>
-          <Link to="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
+          <Link to="https://github.com/kenawak/homeofproject" target="_blank" rel="noopener noreferrer">
             <ParticleButton
               variant="outline"
               className="border-gray-700 bg-gray-800 hover:border-amber-50"
@@ -80,7 +80,7 @@ function Header({ onSubmitClick }: HeaderProps) {
                 Submit Project
               </Button>
               <Link
-                to="https://github.com/your-repo"
+                to="https://github.com/kenawak/homeofproject"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block py-2"

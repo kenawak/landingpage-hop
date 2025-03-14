@@ -18,7 +18,7 @@ function Header({ onSubmitClick }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+    <header className="fixed top-10 mt-3 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-green-400">
           Home of Projects
@@ -36,7 +36,6 @@ function Header({ onSubmitClick }: HeaderProps) {
               successDuration={1000}
               onClick={() => {}}
             >
-              <Github className="mr-2 h-4 w-4" />
               Star on GitHub
             </ParticleButton>
           </Link>

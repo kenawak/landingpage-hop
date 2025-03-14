@@ -19,7 +19,7 @@ export function HeroSection({ onSubmitClick }: HeroSectionProps) {
   }, [])
 
   return (
-    <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
+    <section className="relative mt-2.5 pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gray-950">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-green-900/20" />
@@ -91,8 +91,8 @@ export function HeroSection({ onSubmitClick }: HeroSectionProps) {
                     ))}
                   </CarouselContent>
                   <div className="flex justify-center gap-2 mt-4">
-                    <CarouselPrevious className="relative static transform-none translate-y-0 data-[hidden=true]:hidden" />
-                    <CarouselNext className="relative static transform-none translate-y-0 data-[hidden=true]:hidden" />
+                    <CarouselPrevious className="static text-zinc-700 transform-none translate-y-0 data-[hidden=true]:hidden" />
+                    <CarouselNext className="static text-zinc-700 transform-none translate-y-0 data-[hidden=true]:hidden" />
                   </div>
                 </Carousel>
               </div>

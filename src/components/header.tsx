@@ -18,7 +18,7 @@ function Header({ onSubmitClick }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-10 mt-3 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+    <header className="top-10 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
       <nav className="container mx-auto px-3 h-16 flex items-center justify-between">
         <Link to="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-green-400">
         <FolderKanban className="h-6 w-6 text-cyan-400" />

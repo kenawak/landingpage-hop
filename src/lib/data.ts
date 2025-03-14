@@ -39,7 +39,7 @@ export const featuredProjects: Project[] = [
     id: "12",
     title: "Linksy",
     description: "A link/bookmark sharing platform.",
-    image: "/path/to/image.jpg",  // Replace with actual image path
+    image: "https://res.cloudinary.com/dfonae1gu/image/upload/v1741951178/linksy_ctkkbs.png",  // Replace with actual image path
     tags: ["Platform", "Bookmark", "Sharing"],
     social: {
       github: "https://github.com/username/linksy",

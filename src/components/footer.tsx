@@ -26,57 +26,23 @@ export function Footer() {
               </Link>
             </div>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-bold text-white mb-4">Contribute</h4>
+            <p className="text-gray-400 mb-4">
+              We welcome contributions from the community! Check out our GitHub repository to get started.
+            </p>
+            <Link to="https://github.com/kenawak/homeofproject" className="text-cyan-400 hover:underline">
+              Contribute on GitHub
+            </Link>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Support
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  GitHub Repository
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  Telegram Channel
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-bold text-white mb-4">Join Us</h4>
+            <p className="text-gray-400 mb-4">
+              Join our Telegram community to connect with other developers and stay updated.
+            </p>
+            <Link to="https://t.me/your_telegram_channel" className="text-cyan-400 hover:underline">
+              Join on Telegram
+            </Link>
           </div>
         </div>
 
@@ -89,6 +55,11 @@ export function Footer() {
           </p>
         </div>
       </div>
+      <div className="bg-gray-800 text-white text-center py-4 w-full">
+          <p>
+            �� This project is an ongoing community effort. Data might be <strong className="underline">inaccurate</strong>.
+          </p>
+        </div>
     </footer>
   )
 }

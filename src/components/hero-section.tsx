@@ -45,7 +45,7 @@ export function HeroSection({ onSubmitClick }: HeroSectionProps) {
               >
                 Submit Your Project <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/github">
+              <Link to="https://github.com/kenawak/homeofproject">
                 <Button
                   variant="outline"
                   className="border-gray-700 text-gray-300 hover:text-gray-300 bg-gray-800 hover:bg-grey-700  py-6 px-8 text-lg"
@@ -99,12 +99,11 @@ export function HeroSection({ onSubmitClick }: HeroSectionProps) {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 items-center justify-center">
           {[
-            { value: "200+", label: "Projects" },
-            { value: "500+", label: "Developers" },
-            { value: "10K+", label: "Monthly Views" },
-            { value: "50+", label: "Countries" },
+            { value: "20+", label: "Projects" },
+            { value: "120+", label: "Developers" },
+            { value: "1K+", label: "Views" },
           ].map((stat, index) => (
             <div
               key={index}

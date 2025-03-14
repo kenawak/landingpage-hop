@@ -11,7 +11,6 @@ export interface Project {
       telegram?: string
       twitter?: string
       linkedin?: string
+      website?: string
     }
   }
-  
-  

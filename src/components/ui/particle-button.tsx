@@ -1,15 +1,13 @@
 import * as React from "react"
-import { useState, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
-import type { ButtonProps } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { useState, useRef } from "react"
+import { Button } from "@/components/ui/button"
+import { motion, AnimatePresence } from "framer-motion"
+import { cn } from "@/lib/utils"
+import { Star } from "lucide-react"
 
-interface ParticleButtonProps extends ButtonProps {
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    onSuccess?: () => void;
-    successDuration?: number;
+interface ParticleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    successDuration?: number
+    variant?: string
 }
 
 function SuccessParticles({
@@ -51,45 +49,45 @@ function SuccessParticles({
     );
 }
 
-function ParticleButton({
-    children,
-    onClick,
-    onSuccess,
+export function ParticleButton({
     successDuration = 1000,
+    variant = "default",
     className,
+    children,
     ...props
 }: ParticleButtonProps) {
-    const [showParticles, setShowParticles] = useState(false);
-    const buttonRef = useRef<HTMLButtonElement>(null);
+    const [success, setSuccess] = useState(false)
+    const buttonRef = useRef<HTMLButtonElement>(null)
 
     const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        setShowParticles(true);
+        setSuccess(true);
 
-        if (onClick) {
-            onClick(e);
+        if (props.onClick) {
+            props.onClick(e);
         }
 
         setTimeout(() => {
-            setShowParticles(false);
-            if (onSuccess) {
-                onSuccess();
+            setSuccess(false);
+            if (props.onSuccess) {
+                props.onSuccess();
             }
         }, successDuration);
     };
 
     return (
         <>
-            {showParticles && <SuccessParticles buttonRef={buttonRef} />}
+            {success && <SuccessParticles buttonRef={buttonRef} />}
             <Button
                 ref={buttonRef}
-                onClick={handleClick}
+                variant={variant}
                 className={cn(
                     "relative",
-                    showParticles && "scale-95",
+                    success && "scale-95",
                     "transition-transform duration-100",
                     className
                 )}
                 {...props}
+                onClick={handleClick}
             >
                 {children}
                 <Star className="h-4 w-4 text-orange-300" />
@@ -97,5 +95,3 @@ function ParticleButton({
         </>
     );
 }
-
-export { ParticleButton }

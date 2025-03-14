@@ -196,7 +196,7 @@ function ExploreProjects({ onProjectClick }: ExploreProjectsProps) {
                 <Button
                   onClick={loadMore}
                   variant="outline"
-                  className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white px-6 py-5"
+                  className="border-gray-700 bg-gray-800 hover:border-amber-50 px-6 py-5"
                 >
                   Load More Projects
                 </Button>

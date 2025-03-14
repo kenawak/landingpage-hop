@@ -1,6 +1,5 @@
 "use client"
 
-import React from 'react'
 import { useState } from "react"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
@@ -10,6 +9,7 @@ import { Footer } from "@/components/footer"
 import { ProjectDetailsModal } from "@/components/project-details-modal"
 import type { Project } from "@/lib/types"
 import { BetaBanner } from './banner'
+import { BetaToast } from './toast'
 
 export function HomePage() {
   const [isSubmitFormOpen, setIsSubmitFormOpen] = useState(false)
@@ -18,6 +18,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <BetaBanner />
+      <BetaToast />
       <Header onSubmitClick={() => setIsSubmitFormOpen(true)} />
 
       <HeroSection onSubmitClick={() => setIsSubmitFormOpen(true)} />

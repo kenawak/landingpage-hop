@@ -39,12 +39,14 @@ export function HeroSection({ onSubmitClick }: HeroSectionProps) {
               Share your work with the Telegram community and get the recognition you deserve.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                onClick={onSubmitClick}
-                className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white border-0 py-6 px-8 text-lg"
-              >
-                Submit Your Project <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <a href="https://t.me/hsnjk_bot" target="_blank" rel="noopener noreferrer">
+                <Button
+                  onClick={onSubmitClick}
+                  className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white border-0 py-6 px-8 text-lg"
+                >
+                  Submit Your Project <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
               <Link to="https://github.com/kenawak/homeofproject">
                 <Button
                   variant="outline"

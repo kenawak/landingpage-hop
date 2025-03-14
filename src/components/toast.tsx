@@ -39,7 +39,7 @@ export function ContributionToast() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-amber-700 opacity-0.1 text-white p-4 z-10 rounded shadow-lg animate-fade-in">
+    <div className="fixed bottom-4 right-4 bg-gray-800 text-white z-10 p-4 rounded shadow-lg animate-fade-in">
       <p className="mt-2">
         Contribute to our open-source project on GitHub and make a difference! 💻
       </p>
@@ -47,8 +47,8 @@ export function ContributionToast() {
         href="https://github.com/your-repo"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 inline-block bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition-colors"
-      >
+        className="mt-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition-colors"
+        >
         Contribute Now
       </a>
     </div>
